@@ -1,0 +1,53 @@
+<app-header></app-header>
+<div class="wrapper">
+  <div class="block-one">
+    <div>
+      <img
+        src="https://i.ytimg.com/vi/92Sm5OYPu-s/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDy63aWpjwtcBkXTV3h6mu5b7vEYA"
+        alt=""
+        class="image-vodeo"
+      />
+    </div>
+    <div class="wrapper-info">
+      <div class="title">{{ respuesta?.fechaCompra }}</div>
+      <div class="subtitle">{{ respuesta?.productoNombre }}</div>
+      <div class="date">1490 visualizaciones☼22 jun 2020</div>
+    </div>
+  </div>
+</div>
+<div class="block-two">
+  <div>
+    <ul class="comment-list">
+      <li *ngFor="let detalleComentario of comentarios">
+        <div class="author">
+          <img
+            src="https://i.ytimg.com/vi/92Sm5OYPu-s/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDy63aWpjwtcBkXTV3h6mu5b7vEYA"
+            alt=""
+          />
+        </div>
+        <div class="coment">
+          <b><div>Leifer</div></b>{{ detalleComentario?.fechaCompra }}
+        </div>
+      </li>
+    </ul>
+    <div>
+      <form [formGroup]="form" (submit)="enviarData()">
+        <div class="form-group">
+          <div for="commentArea" class="title-commet">Comentar</div>
+          <textarea
+            formControlName="textAreaComentario"
+            class="textArea"
+            name=""
+            id="commentArea"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <div>
+            <button class="btn-enviar">Enviar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+DATA: {{ respuesta | json }}

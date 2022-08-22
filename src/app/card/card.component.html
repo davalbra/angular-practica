@@ -1,0 +1,16 @@
+<div class="card">
+  <!-- <img class="image" [src]="dataEntrante?.img" alt="" /> -->
+  <img
+    [routerLink]="['/', 'post', dataEntrante.id]"
+    class="image"
+    src="https://i.ytimg.com/vi/92Sm5OYPu-s/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDy63aWpjwtcBkXTV3h6mu5b7vEYA"
+    alt=""
+  />
+  <div class="wrapper-text">
+    <div class="title">{{ dataEntrante?.productoNombre }}</div>
+    <div class="sub-title">{{ dataEntrante?.valor }}</div>
+  </div>
+  <div>
+    <button class="favorite" (click)="agregarFavorito()">Add favorite</button>
+  </div>
+</div>

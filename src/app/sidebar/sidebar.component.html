@@ -1,0 +1,19 @@
+<div>
+  <h3 class="title">Lista de favoritos</h3>
+</div>
+<div class="divider"></div>
+<div>
+  <ul class="favorite-list">
+    <li *ngFor="let video of listdeVideos">
+      <div class="card">
+        <!-- <img [src]="video?.data?.img" alt="" class="mini-image" /> -->
+        <img
+          src="https://i.ytimg.com/vi/92Sm5OYPu-s/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDy63aWpjwtcBkXTV3h6mu5b7vEYA"
+          alt=""
+          class="mini-image"
+        />
+      </div>
+      <div class="title-inside">{{ video?.data?.productoNombre }}</div>
+    </li>
+  </ul>
+</div>
